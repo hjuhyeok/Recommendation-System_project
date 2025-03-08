@@ -5,9 +5,9 @@
 
 ## 📂 데이터셋
 사용된 데이터셋은 **BX-Book 데이터셋**으로, 다음과 같은 정보를 포함합니다:
-- **사용자 데이터 (`users.csv`)**: 사용자 ID, 위치, 나이
-- **아이템 데이터 (`books.csv`)**: 책 ID, 제목, 저자, 출판 연도, 출판사
-- **평점 데이터 (`ratings.csv`)**: 사용자 ID, 책 ID, 평점
+- **사용자 데이터 (`users.csv`)**: User-ID, Location, Age
+- **아이템 데이터 (`books.csv`)**: ISBN, Book-Title, Book-Author, Year-Of Publication, Publisher
+- **평점 데이터 (`ratings.csv`)**: User-ID, ISBN, Book-Rating
 
 ## ⚙️ 전처리 과정
 1. 평점이 0인 데이터 제거
