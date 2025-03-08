@@ -1,2 +1,59 @@
 # Recommendation-System_project
-2023-2학기 개인화추천시스템 프로젝트입니다.
+
+## 2023-2학기 개인화추천시스템 프로젝트입니다.
+
+## 📌 프로젝트 개요
+이 프로젝트는 **Factorization Machine(FM)** 기반의 추천 시스템을 구현한 것입니다. 사용자의 선호도를 분석하여 맞춤형 추천을 제공하는 개인화 추천 시스템을 구축합니다.
+
+## 📂 데이터셋
+사용된 데이터셋은 **BX-Book 데이터셋**으로, 다음과 같은 정보를 포함합니다:
+- **사용자 데이터 (`users.csv`)**: 사용자 ID, 위치, 나이
+- **아이템 데이터 (`books.csv`)**: 책 ID, 제목, 저자, 출판 연도, 출판사
+- **평점 데이터 (`ratings.csv`)**: 사용자 ID, 책 ID, 평점
+
+## ⚙️ 전처리 과정
+1. 평점이 0인 데이터 제거
+2. 나이(`age`) 및 출판 연도(`year`) 정규화
+3. 사용자-아이템-평점 데이터를 병합
+4. 사용자 및 아이템 ID, 위치, 저자 등을 **숫자로 변환 (인코딩)**
+5. 희소 행렬(Sparse Matrix) 형태로 변환
+
+## 🤖 추천 알고리즘: **Factorization Machine (FM)**
+Factorization Machine은 협업 필터링에서 사용되는 알고리즘으로, 아이템과 사용자 간 **잠재 요인(Latent Factors)**을 학습하여 예측 성능을 향상시킵니다.
+
+### 🔹 FM 주요 개념
+- **잠재 요인(Latent Factors)**을 학습하여 사용자-아이템 간 관계를 모델링
+- 기존 **행렬 분해(Matrix Factorization, MF)** 모델을 확장하여 다항 상호작용(Feature Interaction)까지 고려
+- **Adam Optimizer**를 적용한 최적화 진행
+- **RMSE (Root Mean Square Error)** 지표를 활용한 모델 평가
+
+## 📈 모델 학습 과정
+1. **데이터 인코딩**: 사용자, 아이템, 저자 등의 특성을 숫자로 변환
+2. **Factorization Machine 구현**: Adam Optimizer 기반의 FM 모델 학습
+3. **평점 예측**: 훈련된 모델을 사용하여 사용자별 맞춤 추천 제공
+4. **모델 평가**: RMSE 지표를 사용하여 성능 측정
+
+## 🛠 사용 기술
+- **Python**
+- **pandas, numpy**: 데이터 전처리
+- **scikit-learn**: 데이터 분할 및 모델 평가
+- **Factorization Machine (FM)** 알고리즘 구현
+
+## 🚀 실행 방법
+```bash
+# 필수 라이브러리 설치
+pip install numpy pandas scikit-learn
+
+# Jupyter Notebook 실행
+jupyter notebook
+```
+
+## 📌 기대 효과
+- **사용자 맞춤형 추천**을 통해 개인화 경험 제공
+- **Factorization Machine(FM) 모델**을 활용한 고성능 추천 시스템 구현
+- **대형 데이터셋을 활용한 확장 가능성** 연구
+
+---
+
+본 프로젝트는 추천 시스템의 기본 원리를 이해하고 실무에서 적용할 수 있도록 설계되었습니다. 추가적인 기능을 구현하고 싶다면, 다양한 추천 알고리즘(예: 협업 필터링, 콘텐츠 기반 필터링 등)을 비교 분석해보는 것도 좋은 방법입니다! 🚀
+
