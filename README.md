@@ -38,14 +38,6 @@ Factorization Machine은 협업 필터링에서 사용되는 알고리즘으로,
 - **scikit-learn**: 데이터 분할 및 모델 평가
 - **Factorization Machine (FM)** 알고리즘 구현
 
-## 🚀 실행 방법
-```bash
-# 필수 라이브러리 설치
-pip install numpy pandas scikit-learn
-
-# Jupyter Notebook 실행
-jupyter notebook
-```
 
 ## 📌 기대 효과
 - **사용자 맞춤형 추천**을 통해 개인화 경험 제공
